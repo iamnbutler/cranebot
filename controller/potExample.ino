@@ -1,4 +1,4 @@
-/* Cranebot Controller */
+/* Cranebot Controller: Potentiometer Example */
 
 #include <Servo.h>
 
@@ -8,9 +8,6 @@ Servo tiltServo;  // create servo object to control a servo
 int potpin = 0;  // analog pin used to connect the potentiometer
 int pan;    // variable to read the value from the analog pin
 int tilt;    // variable to read the value from the analog pin
-int obj[] = { 0, 0 } // xPos, yPos (from 0-100)
-bool hCenter = FALSE;
-bool vCenter = FALSE;
 
 void setup() {
   Serial.begin(9600);
@@ -21,39 +18,6 @@ void setup() {
 }
 
 void loop() {
-  // TODO: Get object postion from pi
-
-  if (obj[0] < 34 || obj[0] > 66) { // Check if horizontally centered
-    hCenter = FALSE;
-  } else {
-    hCenter = TRUE;
-  }
-
-  if (obj[1] < 34 || obj[1] > 66) { // Check if vertically centered
-    vCenter = FALSE;
-  } else {
-    vCenter = TRUE;
-  }
-
-  if (hCenter) {
-    // Object is horizontally centered
-    return;
-  } else {
-    // Horizontally center object
-    // TODO: Pan to center object
-
-
-  }
-
-  if (vCenter) {
-    // Object is vertically centered
-    // TODO: What happens when the object is centered?
-    return;
-  } else {
-    // Center the object
-    // TODO: Tilt to center object
-
-  }
 
   /* Pan */
   pan = analogRead(potpin);
