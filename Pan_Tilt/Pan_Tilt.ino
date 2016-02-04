@@ -26,7 +26,7 @@ void loop() {
 if(Serial.available() > 0){
     int input = Serial.read();
 
-   /* if(input == 'a'){
+    if(input == 'a'){
       if((pan + 5) < maxpan) pan += 5;
     }
 
@@ -40,7 +40,7 @@ if(Serial.available() > 0){
 
     if(input == 'w'){
       if((tilt - 5 ) > mintilt) tilt -= 5;
-    }*/
+    }
 
     if(input == 'p'){
       for(int i = minpan ; i < maxpan ; i++) {
