@@ -1,26 +1,24 @@
-/* Cranebot controller */
+/* Cranebot Controller */
 
 #include <Servo.h>
 
-Servo servo1;
+Servo myservo1;  // create servo object to control a servo
+Servo myservo2;  // create servo object to control a servo
 
-int pos = 0;    // variable to store the servo position
+int potpin = 0;  // analog pin used to connect the potentiometer
+int val;    // variable to read the value from the analog pin
 
 void setup() {
-  servo1.attach(9);  // attaches the servo on pin 9 to the servo object
+  Serial.begin(9600);
+  myservo1.attach(9);  // attaches the servo on pin 9 to the servo object
+  myservo2.attach(10);  // attaches the servo on pin 9 to the servo object
 }
 
 void loop() {
-
-  /* Example Code
-  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    servo1.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(500);                       // waits 15ms for the servo to reach the position
-  }
-  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-    servo1.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(500);                       // waits 15ms for the servo to reach the position
-  }
-  */
+  val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
+  val = map(val, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
+  myservo1.write(val);                  // sets the servo position according to the scaled value
+  myservo2.write(val);
+  Serial.println(val);
+  delay(15);                           // waits for the servo to get there
 }
