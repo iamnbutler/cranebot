@@ -4,7 +4,7 @@ Servo panservo;
 Servo tiltservo;
 
 const int maxpan = 180;
-const int minpan = 1800;
+const int minpan = 180;
 const int maxtilt = 180;
 const int mintilt = 45;
 
