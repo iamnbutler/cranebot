@@ -11,7 +11,7 @@ camera.brightness 	= 	60 												# Adjust Brightness
 # camera.vflip 			= 	True
 loops = 0
 
-while (loops > 20):
+while (loops < 20):
 	camera.capture('export/' + str(uuid.uuid1()) + '_test_' + '.jpg')
 	loops = loops + 1
 	time.sleep(2)
