@@ -12,6 +12,6 @@ camera.brightness 	= 	60 												# Adjust Brightness
 loops = 0
 
 while (loops < 20):
-	camera.capture('export/' + str(uuid.uuid1()) + '_test_' + '.jpg')
+	camera.capture('export/test_' + loops + '_' + str(uuid.uuid1()) + '.jpg')
 	loops = loops + 1
 	time.sleep(2)
