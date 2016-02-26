@@ -8,6 +8,6 @@ camera.brightness 	= 	60 												# Adjust Brightness
 # camera.hflip 			= 	True
 # camera.vflip 			= 	True
 
-camera.capture(uuid.uuid4 + '_loc_' + locID + '.jpg')	# Name image with unique identifier + a location number
+camera.capture(uuid.uuid4() + '_loc_.jpg')	# Name image with unique identifier + a location number
 
 time.sleep(5.0)
