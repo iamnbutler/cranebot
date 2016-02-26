@@ -1,48 +1,29 @@
-int mode = 0; // 0 = fear, 1 = aggression, 2 = love
-int leftEye = 0;
-int rightEye = 0;
+//Arduino PLL Speed Control：
+int E1 = 4;   
+int M1 = 5;
+int E2 = 7;                         
+int M2 = 6;  
 int leftWheelSpeed = 0;
 int rightWheelSpeed = 0;
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-
-}
-
-void loop() {
-  
-  // put your main code here, to run repeatedly:
-leftEye = analogRead(0);
-rightEye = analogRead(1);
-
-Serial.println(leftEye);
-
-//
-
-//map & constrain
- switch(mode) {
-    case 0:
-    //fear(leftEye, rightEye);
-    leftWheelSpeed = map(leftEye, 0, 100, 0, 400);
-    rightWheelSpeed = map(rightEye, 0, 100, 0, 400);
-    break;
-    case 1:
-    //aggression(leftEye, rightEye);
-    leftWheelSpeed = map(leftEye, 0, 100, 0, 400);
-    rightWheelSpeed = map(rightEye, 0, 100, 0, 400);
-    break;
-    case 2:
-    //love(leftEye, rightEye);
-    leftWheelSpeed = map(leftEye, 0, 100, 0, 400);
-    rightWheelSpeed = map(rightEye, 0, 100, 0, 400);
-    break;
-    default:
-    //curiosity
-    leftWheelSpeed = map(leftEye, 0, 100, 0, 400);
-    rightWheelSpeed = map(rightEye, 0, 100, 0, 400);
-    break;
-  }
-  // set wheel speeds
- // motors.setM1Speed(leftWheelSpeed); //we dont have moteor object.
-  //motors.setM2Speed(rightWheelSpeed);
+                         
+ 
+void setup() 
+{ 
+    pinMode(M1, OUTPUT);   
+    pinMode(M2, OUTPUT); 
+    pinMode(E1, OUTPUT); 
+    pinMode(E2, OUTPUT); 
+} 
+ 
+void loop() 
+{ 
+  int value;
+  for(value = 0 ; value <= 255; value+=5) 
+  { 
+    digitalWrite(E1,HIGH);   
+    digitalWrite(E2, HIGH);       
+    analogWrite(M1, value);   //PLL Speed Control
+    analogWrite(M2, value);   //PLL Speed Control
+    delay(30); 
+  }  
 }
