@@ -3,6 +3,7 @@
 
 # Setup
 import picamera
+import uuid
 camera 							= 	picamera.PiCamera()				# Set up instance of camera
 camera.brightness 	= 	60 												# Adjust Brightness
 # camera.hflip 			= 	True
