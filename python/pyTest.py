@@ -7,7 +7,9 @@ camera 							= 	picamera.PiCamera()				# Set up instance of camera
 camera.brightness 	= 	60 												# Adjust Brightness
 # camera.hflip 			= 	True
 # camera.vflip 			= 	True
+int x = 0;
 
-camera.capture(uuid.uuid4() + '_loc_.jpg')	# Name image with unique identifier + a location number
-
-time.sleep(5.0)
+while x > 20:
+  camera.capture(uuid.uuid1() + '_test_' + x + '.jpg')
+  x = x + 1
+  time.sleep(2)
