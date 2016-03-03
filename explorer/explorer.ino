@@ -19,7 +19,7 @@ Servo tiltServo;  // create servo object to control a servo
 #define echoPin 12
 #define LED_rangeNoInput 7
 #define LED_rangeInput 6
-#define LED_rangeMinimum 5
+#define LED_rangeTrigger 5
 
 // Variables
 int pan;    // variable to read the value from the analog pin
@@ -30,7 +30,7 @@ void setup() {
   Serial.begin(9600);
 
   // Set up servos
-  panServo.attach(9);  		// attaches the servo on pin 9 to the servo object
+  panServo.attach(11);  	// attaches the servo on pin 11 to the servo object
   tiltServo.attach(10);  	// attaches the servo on pin 10 to the servo object
 
   // Assign Pins
@@ -39,22 +39,18 @@ void setup() {
   pinMode(LED_rangeNoInput, OUTPUT);	// LED: Rangefinder input too far away
   pinMode(LED_rangeInput, OUTPUT);		// LED: Rangefinder input within range
   pinMode(LED_rangeTrigger, OUTPUT);	// LED: Rangefinder input trigger
-
-  Serial.println("Setup Finished");
 }
 
 // Loops
 void loop() {
+	// Get range and send to Pi
 	range();
-
-	// Test Pi connection over serial
-	Serial.println("Hello, World!");
 
   // Run the program 5 times per sec
   delay(200);
 }
 
-// Use rangefinder to find range in cm
+// Use rangefinder to find range in cm and send to Pi with Serial
 void range() {
 	// Calculate distance between RF and object
 	long duration, distance;
@@ -80,4 +76,7 @@ void range() {
     digitalWrite(LED_rangeInput,LOW);
     digitalWrite(LED_rangeNoInput,HIGH);
   }
+
+  // Send range to Pi
+	Serial.println(distance);
 }
