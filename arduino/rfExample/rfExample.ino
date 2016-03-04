@@ -28,8 +28,7 @@ void loop() {
   if (distance < 14) {
     digitalWrite(inRange,LOW);
     digitalWrite(tooClose,HIGH);
-  }
-  else if (distance < 98) {
+  } else if (distance < 98) {
     digitalWrite(inRange,HIGH);
     digitalWrite(tooClose,LOW);
   } else {
