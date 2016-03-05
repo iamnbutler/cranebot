@@ -1,3 +1,5 @@
+#include <DRV8835MotorShield.h>
+
 /* Explorer Bot
  * An robot that explores new places and photographs them.
  * (Nathan Butler | iamnbutler@gmail.com)
@@ -15,11 +17,14 @@
 // Definitions
 Servo panServo;  // create servo object to control a servo
 Servo tiltServo;  // create servo object to control a servo
+
 #define trigPin 13
 #define echoPin 12
-#define LED_rangeNoInput 7
-#define LED_rangeInput 6
-#define LED_rangeTrigger 5
+#define LED_rangeNoInput 11
+#define LED_rangeInput 4
+#define LED_rangeTrigger 3
+
+DRV8835MotorShield motors;
 
 // Variables
 int pan;    // variable to read the value from the analog pin
@@ -67,11 +72,14 @@ void range() {
     digitalWrite(LED_rangeTrigger,HIGH);
     digitalWrite(LED_rangeInput,LOW);
     digitalWrite(LED_rangeNoInput,LOW);
+    movement();
   } else if (distance < 98) {
+    stopMovement();
   	digitalWrite(LED_rangeTrigger,LOW);
     digitalWrite(LED_rangeInput,HIGH);
     digitalWrite(LED_rangeNoInput,LOW);
   } else {
+    stopMovement();
   	digitalWrite(LED_rangeTrigger,LOW);
     digitalWrite(LED_rangeInput,LOW);
     digitalWrite(LED_rangeNoInput,HIGH);
@@ -79,4 +87,16 @@ void range() {
 
   // Send range to Pi
 	Serial.println(distance);
+}
+
+void movement() {
+    motors.setM1Speed(50);
+    motors.setM2Speed(50);
+    delay(2);
+}
+
+void stopMovement() {
+  motors.setM1Speed(0);
+  motors.setM2Speed(0);
+  delay(2);
 }
