@@ -24,11 +24,18 @@ Servo tiltServo;  // create servo object to control a servo
 #define LED_rangeInput 4
 #define LED_rangeTrigger 3
 
+const int turnLength = 1000; // Length of the turn in millis
+
 DRV8835MotorShield motors;
 
 // Variables
-int pan;    // variable to read the value from the analog pin
-int tilt;   // variable to read the value from the analog pin
+int pan = 0;    // variable to read the value from the analog pin
+int tilt = 0;   // variable to read the value from the analog pin
+
+unsigned long currentMillis = 0;
+unsigned long previousMillis = 0;
+
+int movementDirection = 0; // 0 = drive, 1 = reverse, 2 = turn
 
 // Setup
 void setup() {
@@ -49,7 +56,9 @@ void setup() {
 // Loops
 void loop() {
 	// Get range and send to Pi
-	range();
+	// range();
+
+  movement();
 
   // Run the program 5 times per sec
   delay(200);
@@ -72,14 +81,11 @@ void range() {
     digitalWrite(LED_rangeTrigger,HIGH);
     digitalWrite(LED_rangeInput,LOW);
     digitalWrite(LED_rangeNoInput,LOW);
-    movement();
   } else if (distance < 98) {
-    stopMovement();
   	digitalWrite(LED_rangeTrigger,LOW);
     digitalWrite(LED_rangeInput,HIGH);
     digitalWrite(LED_rangeNoInput,LOW);
   } else {
-    stopMovement();
   	digitalWrite(LED_rangeTrigger,LOW);
     digitalWrite(LED_rangeInput,LOW);
     digitalWrite(LED_rangeNoInput,HIGH);
@@ -90,13 +96,53 @@ void range() {
 }
 
 void movement() {
-    motors.setM1Speed(50);
-    motors.setM2Speed(50);
-    delay(2);
+
+  if (movementDirection = 0) {
+    if (distance > 98) {
+      motors.setM1Speed(140);
+      motors.setM2Speed(140);
+      delay(2);
+    } else if (distance > 14) {
+      motors.setM1Speed(70);
+      motors.setM2Speed(70 );
+    } else {
+      motors.setM1Speed(0);
+      motors.setM2Speed(0);
+      capture();
+      delay(1200);
+      movementDirection = 1;
+    }
+    Serial.println('drive');
+  }
+
+  if (movementDirection = 1) {
+    motors.setM1Speed(-70);
+    motors.setM2Speed(-70);
+    if (distance > 98) {
+      motors.setM1Speed(0);
+      motors.setM2Speed(0);
+      delay(1200);
+      movementDirection = 2;
+      previousMillis = millis();
+    }
+    Serial.println('reverse');
+  }
+
+  if (movementDirection = 2) {
+    // Turn until x millis have passed
+    currentMillis = millis();
+    motors.setM1Speed(70);
+    motors.setM2Speed(-70);
+
+    if ((currentMillis - previousMillis) > turnLength) {
+      // Stop turning and move forward
+      movementDirection = 0;
+    }
+
+    Serial.println('turn');
+  }
 }
 
-void stopMovement() {
-  motors.setM1Speed(0);
-  motors.setM2Speed(0);
-  delay(2);
+void capture() {
+  // TODO: Send signal to pi to run photo scripts
 }
