@@ -39,7 +39,9 @@ int pos = 0;
 unsigned long currentMillis = 0;
 unsigned long previousMillis = 0;
 long rawDistance, duration;
-int distance = 400;
+int distance = 0;
+int lastDistance = 0;
+
 
 int movementDirection = 0; // 0 = drive, 1 = reverse, 2 = turn
 
@@ -111,7 +113,6 @@ void loop() {
 
     // .: Pan camera for capture :.
     panServo.write(70);
-    panServo.write(0);
   } else if (distance > mediumDistance) {
     //== Furthest Distance ==//
 
@@ -149,13 +150,26 @@ void range() {
     // Most readings over 2XX or under 12 are faulty or split second readings
     // since the distance loop should stop the rover at around ~26 distance
 
-    // TODO: Smooth out distance readings
-
     distance = rawDistance;
+
+    // .: Smooth Distance :.
+    int diff = (lastDistance - distance); // get the difference
+    int diffAbs = abs(diff);
+    if (diffAbs < 2.5) {
+      distance = distance + (diff * 0.2); // Add a fifth of the new value to distance
+    } else if (diffAbs > 20) {
+      distance = distance + (diff * 0.1); // Add a tenth of the new value to distance
+    }
+
+    // Save distance for the next comparison
+    lastDistance = distance;
+
+    // Log for debugging
     Serial.print(distance);
     Serial.print(" | ");
-    Serial.print(rawDistance);
-    Serial.println(" ");
+    Serial.print(diffAbs);
+    Serial.print(" | ");
+    Serial.println(rawDistance);
   }
 }
 
