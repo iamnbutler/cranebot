@@ -15,12 +15,19 @@
 // Definitions
 Servo panServo;  // create servo object to control a servo
 Servo tiltServo;  // create servo object to control a servo
+Servo lWheelServo;  // create servo object to control a servo
+Servo rWheelServo;  // create servo object to control a servo
 
 #define trigPin 13
 #define echoPin 12
 #define LED_rangeNoInput 11
 #define LED_rangeInput 4
 #define LED_rangeTrigger 3
+
+// Define distances to make changing them easier
+const int mediumDistance = 140;
+const int closeDistance = 16;
+const int minDistance = 6;
 
 const int turnLength = 1000; // Length of the turn in millis
 
@@ -31,7 +38,8 @@ int pos = 0;
 
 unsigned long currentMillis = 0;
 unsigned long previousMillis = 0;
-long rawDistance, duration, distance;
+long rawDistance, duration;
+int distance = 400;
 
 int movementDirection = 0; // 0 = drive, 1 = reverse, 2 = turn
 
@@ -42,6 +50,8 @@ void setup() {
   // Set up servos
   panServo.attach(10);  	// attaches the servo on pin 11 to the servo object
   tiltServo.attach(9);  	// attaches the servo on pin 10 to the servo object
+  lWheelServo.attach(8);
+  rWheelServo.attach(7);
 
   // Assign Pins
   pinMode(trigPin, OUTPUT); // RF Trig Pin
@@ -49,17 +59,78 @@ void setup() {
   pinMode(LED_rangeNoInput, OUTPUT);	// LED: Rangefinder input too far away
   pinMode(LED_rangeInput, OUTPUT);		// LED: Rangefinder input within range
   pinMode(LED_rangeTrigger, OUTPUT);	// LED: Rangefinder input trigger
+
+  tiltServo.write(60);
 }
 
 // Loops
 void loop() {
-	// Get range and send to Pi
+	// Get range for use in loops
 	range();
 
-  panTilt();
+  if (distance < closeDistance && distance > minDistance) {
+    //== Closest Distance ==//
 
-  // Run the program 5 times per sec
-  delay(200);
+    // .: Set distance LEDs :.
+    digitalWrite(LED_rangeTrigger,HIGH);
+    digitalWrite(LED_rangeInput,LOW);
+    digitalWrite(LED_rangeNoInput,LOW);
+
+    // .: Set Wheel Speed :.
+    lWheelServo.write(90);  // set servo to stop
+    rWheelServo.write(90);  // set servo to stop
+    delay(2);
+
+    // .: Pan camera for capture :.
+    // TODO: Convert delays to millis functions
+    // Pan every 1.5 seconds to match photo timer
+    Serial.print("Running Camera Scripts...");
+    delay(100); // Try to  sync pi timer to servo timer
+    panServo.write(70);
+    Serial.print(" 30...");
+    delay(1500);
+    // panServo.write(120);
+    // Serial.print(" 60...");
+    // delay(1500);
+    // panServo.write(180);
+    // Serial.print(" 90...");
+    // delay(1500);
+    // Serial.println(" Done");
+  } else if (distance <= mediumDistance){
+    //== Medium Distance ==//
+
+    // .: Set distance LEDs :.
+    digitalWrite(LED_rangeTrigger,LOW);
+    digitalWrite(LED_rangeInput,HIGH);
+    digitalWrite(LED_rangeNoInput,LOW);
+
+    // .: Set Wheel Speed :.
+    lWheelServo.write(105);  // set servo to low-speed
+    rWheelServo.write(75);  // set servo to low-speed
+    delay(2);
+
+    // .: Pan camera for capture :.
+    panServo.write(70);
+    panServo.write(0);
+  } else if (distance > mediumDistance) {
+    //== Furthest Distance ==//
+
+    // .: Set distance LEDs :.
+    digitalWrite(LED_rangeTrigger,LOW);
+    digitalWrite(LED_rangeInput,LOW);
+    digitalWrite(LED_rangeNoInput,HIGH);
+
+    // .: Set Wheel Speed :.
+    lWheelServo.write(120);  // set servo to mid-speed
+    rWheelServo.write(60);  // set servo to mid-speed
+    delay(2);
+
+    // .: Pan camera for capture :.
+    panServo.write(0);
+  }
+
+  // Run the program 10 times per sec
+  delay(100);
 }
 
 // Use rangefinder to find range in cm and send to Pi with Serial
@@ -72,61 +143,23 @@ void range() {
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH);
   rawDistance = (duration/2) / 29.1; // Magic number to convert range to cm
-  Serial.println(rawDistance);
-  if (rawDistance < 240 || rawDistance > 12) {
+
+  // Constrain distance numbers to reasonable numbers
+  if (rawDistance > minDistance && rawDistance < 4000) {
     // Most readings over 2XX or under 12 are faulty or split second readings
     // since the distance loop should stop the rover at around ~26 distance
 
     // TODO: Smooth out distance readings
 
     distance = rawDistance;
-  }
-
-  if (distance < 26) {
-    digitalWrite(LED_rangeTrigger,HIGH);
-    digitalWrite(LED_rangeInput,LOW);
-    digitalWrite(LED_rangeNoInput,LOW);
-  } else if (distance < 140) {
-  	digitalWrite(LED_rangeTrigger,LOW);
-    digitalWrite(LED_rangeInput,HIGH);
-    digitalWrite(LED_rangeNoInput,LOW);
-  } else {
-  	digitalWrite(LED_rangeTrigger,LOW);
-    digitalWrite(LED_rangeInput,LOW);
-    digitalWrite(LED_rangeNoInput,HIGH);
-  }
-  Serial.println(distance);
-}
-
-void movement() {
-
-}
-
-void capture() {
-  // TODO: Send signal to pi to run photo scripts
-
-}
-
-void panTilt() {
-
-  if (distance < 26) {
-    // TODO: Convert delays to millis functions
-    // Pan every 1.5 seconds to match photo timer
-    delay(100); // Try to  sync pi timer to servo timer
-    panServo.write(70);
-    tiltServo.write(40);
-    delay(1500);
-    panServo.write(120);
-    tiltServo.write(40);
-    delay(1500);
-    panServo.write(180);
-    tiltServo.write(40);
-    delay(1500);
-  } else if (distance < 140){
-    panServo.write(70);
-    tiltServo.write(25);
-  } else {
-    panServo.write(0);
-    tiltServo.write(50);
+    Serial.print(distance);
+    Serial.print(" | ");
+    Serial.print(rawDistance);
+    Serial.println(" ");
   }
 }
+
+// void capture() {
+//   // TODO: Send signal to pi to run photo scripts
+
+// }
