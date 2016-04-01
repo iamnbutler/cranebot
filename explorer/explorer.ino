@@ -81,6 +81,7 @@ void loop() {
     turn();
   }
 
+  timer.setInterval(1000, print);
   timer.run();
 }
 
@@ -115,11 +116,11 @@ void range() {
     lastDistance = distance;
 
     // Log for debugging
-    Serial.print(distance);
-    Serial.print(" | ");
-    Serial.print(diffAbs);
-    Serial.print(" | ");
-    Serial.println(rawDistance);
+    // Serial.print(distance);
+    // Serial.print(" | ");
+    // Serial.print(diffAbs);
+    // Serial.print(" | ");
+    // Serial.println(rawDistance);
   }
 }
 
@@ -186,7 +187,6 @@ void drive(){
 }
 
 void reverse(){
-  Serial.println("Start reverse");
   // Reverse in preperation for turn
   if (distance < closeDistance) {
     // .: Set Wheel Speed :.
@@ -215,7 +215,13 @@ void turn(){
 
 void capture() {
   // TODO: Send signal to pi to run photo scripts
-  Serial.println("Image Captured!");
+}
+
+void print() {
+  // This function will be printed once per second for a consistent read time for the pi to pick up
+  // All Serial communications must fall inside this function
+  int x = distance;
+  Serial.println(x);
 }
 
 //== Supporting functions ==//
@@ -233,7 +239,6 @@ void gotoTurn() {
 }
 
 void startTurn() {
-  Serial.print("turning... ");
   lWheelServo.write(150);  // set servo to low-speed
   // rWheelServo.write(90);  // set servo to low-speed
   delay(2);
