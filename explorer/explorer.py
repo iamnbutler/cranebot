@@ -13,7 +13,7 @@ import picamera
 import uuid
 import time
 import serial
-arduino = serial.Serial('COM1', 9600, timeout=.1)
+arduino = serial.Serial('/dev/ttyAMC0', 9600, timeout=.1)
 camera 							= 	picamera.PiCamera()				# Set up instance of camera
 camera.brightness 	= 	60 												# Adjust Brightness
 # camera.hflip 			= 	True											# Uncomment if camera needs to be flipped
