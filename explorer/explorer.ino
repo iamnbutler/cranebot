@@ -73,11 +73,11 @@ void setup() {
 void loop() {
 	// Get range for use in loops
 	range();
-  if (movementDirection === 0) {
+  if (movementDirection == 0) {
     drive();
-  } else if (movementDirection === 1){
+  } else if (movementDirection == 1){
     reverse();
-  } else if (movementDirection === 2){
+  } else if (movementDirection == 2){
     turn();
   }
 
@@ -135,7 +135,7 @@ void drive(){
     // .: Set Wheel Speed :.
     lWheelServo.write(90);  // set servo to stop
     rWheelServo.write(90);  // set servo to stop
-    int setTimeout(4500, gotoTurn();
+    timer.setTimeout(1000, gotoReverse);
 
     // .: Pan camera for capture :.
     // TODO: Convert delays to millis functions
@@ -186,6 +186,7 @@ void drive(){
 }
 
 void reverse(){
+  Serial.println("Start reverse");
   // Reverse in preperation for turn
   if (distance < closeDistance) {
     // .: Set Wheel Speed :.
@@ -198,13 +199,15 @@ void reverse(){
     delay(2);
   } else if (distance > mediumDistance) {
     capture();
-    int setTimeout(4500, gotoTurn();
+    timer.setTimeout(1000, gotoTurn);
   }
 }
 
 void turn(){
   // Turn to go new direction
-  movementDirection = 0; // go to drive();
+  Serial.println("Start Turn");
+  lWheelServo.write(90);  // set servo to stop
+  rWheelServo.write(90);  // set servo to stop
 }
 
 void capture() {
@@ -212,8 +215,28 @@ void capture() {
   Serial.println("Image Captured!");
 }
 
-// Supporting functions
+//== Supporting functions ==//
+
+void gotoDrive() {
+  movementDirection = 0; // go to drive();
+}
+
+void gotoReverse() {
+  movementDirection = 1; // go to turn();
+}
 
 void gotoTurn() {
   movementDirection = 2; // go to turn();
+}
+
+void startTurn() {
+  lWheelServo.write(105);  // set servo to low-speed
+  rWheelServo.write(105);  // set servo to low-speed
+  timer.setTimeout(1000, endTurn);
+}
+
+void endTurn() {
+  lWheelServo.write(90);  // set servo to low-speed
+  rWheelServo.write(90);  // set servo to low-speed
+  timer.setTimeout(1000, gotoDrive);
 }
