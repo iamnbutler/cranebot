@@ -208,6 +208,7 @@ void turn(){
   Serial.println("Start Turn");
   lWheelServo.write(90);  // set servo to stop
   rWheelServo.write(90);  // set servo to stop
+  timer.setTimeout(1000, startTurn);
 }
 
 void capture() {
