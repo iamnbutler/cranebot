@@ -36,7 +36,7 @@ dist								=		0													# Sensor distance to object
 
 def read():
 	while True:
-	data = arduino.readline()[:-2] #the last bit gets rid of the new-line chars
+		data = arduino.readline()[:-2] #the last bit gets rid of the new-line chars
 	if data:
 		print data
 
