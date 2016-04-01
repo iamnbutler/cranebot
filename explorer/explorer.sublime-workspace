@@ -1,0 +1,1161 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"di",
+				"diff"
+			],
+			[
+				"mo",
+				"movement"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"home-",
+				"home-introduction-arrow"
+			],
+			[
+				"turn",
+				"turnLength"
+			],
+			[
+				"mi",
+				"millis	Arduino millis()"
+			],
+			[
+				"movement",
+				"movementDirection"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"border-",
+				"border-color"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"im",
+				"img-width"
+			],
+			[
+				"heade",
+				"header-dark-color"
+			],
+			[
+				"header",
+				"header-dark-bg"
+			],
+			[
+				"dark",
+				"header-dark-color"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"frame",
+				"frame-margin"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"whi",
+				"white-space"
+			],
+			[
+				"song",
+				"song-link"
+			],
+			[
+				"pillar",
+				"pillarGap"
+			],
+			[
+				"pil",
+				"pillarTrigger"
+			],
+			[
+				"time",
+				"timeStep"
+			],
+			[
+				"read",
+				"readArray"
+			],
+			[
+				"pixel",
+				"pixelArray"
+			],
+			[
+				"mouse",
+				"mouse	mousePressed"
+			],
+			[
+				"se",
+				"serialPort"
+			],
+			[
+				"serial",
+				"serialPort"
+			],
+			[
+				"setp",
+				"setup	setup"
+			],
+			[
+				"tur",
+				"turnStart"
+			],
+			[
+				"y",
+				"yPos"
+			],
+			[
+				"blockC",
+				"blockColor"
+			],
+			[
+				"p",
+				"println"
+			],
+			[
+				"chart",
+				"chartCol"
+			],
+			[
+				"point",
+				"pointH"
+			],
+			[
+				"co",
+				"colGutter"
+			],
+			[
+				"col",
+				"colCount"
+			],
+			[
+				"v-s",
+				"v-fg-slide-width"
+			],
+			[
+				"v-fg",
+				"v-fg-btn-bg"
+			],
+			[
+				"borderco",
+				"app-border-color"
+			],
+			[
+				"build",
+				"buildChart"
+			],
+			[
+				"white",
+				"app-text-color-white"
+			],
+			[
+				"20px",
+				"200px"
+			],
+			[
+				"bor",
+				"app-border-color"
+			],
+			[
+				"app",
+				"app-text-color"
+			],
+			[
+				"app-color",
+				"app-text-color"
+			],
+			[
+				"pos",
+				"posLeft"
+			],
+			[
+				"chartLa",
+				"chartLabels"
+			],
+			[
+				"chartL",
+				"chart-labels"
+			],
+			[
+				"textcol",
+				"app-text-color-dark"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"all",
+				"allBars"
+			],
+			[
+				"char",
+				"chartBars"
+			],
+			[
+				"app-b",
+				"app-bg-color"
+			],
+			[
+				"unit",
+				"unitWidth"
+			],
+			[
+				"boun",
+				"bounceInUp"
+			],
+			[
+				"arit",
+				"artist"
+			],
+			[
+				"app-text-color-",
+				"app-text-color-white"
+			],
+			[
+				"overlay",
+				"overlayCleanup"
+			],
+			[
+				"plays",
+				"playsOrdered"
+			],
+			[
+				"deg",
+				"defG2"
+			],
+			[
+				"text",
+				"app-text-color"
+			],
+			[
+				"ari",
+				"artist"
+			],
+			[
+				"bar",
+				"barSpace"
+			],
+			[
+				"app-te",
+				"app-text-color-dark"
+			],
+			[
+				"app-",
+				"app-secondary-color"
+			],
+			[
+				"counter",
+				"counterTime"
+			],
+			[
+				"ar",
+				"artists"
+			],
+			[
+				"app-text-",
+				"app-text-color-dark"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "explorer.ino",
+			"settings":
+			{
+				"buffer_size": 6852,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "explorer.py",
+			"settings":
+			{
+				"buffer_size": 1346,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					""
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Re-run sketch"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch (Processing 3 only)"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch fullscreen"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Export sketch as application"
+				]
+			],
+			[
+				"Packages/Processing/Build Systems/Processing.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 250.0,
+		"last_filter": "instal",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"css co",
+				"Run CSScomb"
+			],
+			[
+				"ard",
+				"Set Syntax: Arduino"
+			],
+			[
+				"comb",
+				"Run CSScomb"
+			],
+			[
+				"com",
+				"Run CSScomb"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"c99",
+				"Set Syntax: C99"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"swig",
+				"Set Syntax: Swig"
+			],
+			[
+				"insat",
+				"Package Control: Install Package"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"yam",
+				"Set Syntax: YAML"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"code",
+				"Codekit: Preview in browser"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pro",
+				"Set Syntax: Processing"
+			],
+			[
+				"process",
+				"Set Syntax: Processing"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"pref",
+				"Preferences: Settings - User"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			]
+		],
+		"width": 503.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Nate/Desktop/Code/cranebot",
+		"/Users/Nate/Desktop/Code/cranebot/explorer"
+	],
+	"file_history":
+	[
+		"/Users/Nate/Desktop/Code/cranebot/explorer/explorer.ino",
+		"/Users/Nate/Downloads/digitalIn_05_smooth/digitalIn_05_smooth.ino",
+		"/Users/Nate/Google Drive/Design/Year 4/2. Semester 2/Design Studies Seminar/Interviews/Transcript Raw",
+		"/Users/Nate/Desktop/Notes for pitch",
+		"/Users/Nate/Desktop/Code/ysdn-2016.github.io/layouts/partials/project-footer.html",
+		"/Users/Nate/Desktop/Code/ysdn-2016.github.io/layouts/projects/case-study.html",
+		"/Users/Nate/Desktop/Code/ysdn-2016.github.io/assets/css/pages/_student.scss",
+		"/Users/Nate/Desktop/moviedl",
+		"/Users/Nate/Dropbox/Public/md-example.htm",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/layouts/student.html",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/assets/css/pages/_student.scss",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/layouts/project.html",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/assets/css/partials/_base.scss",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/assets/js/routes/students.js",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/assets/css/pages/_about.scss",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/content/about.yml",
+		"/Users/Nate/Desktop/researchSources.txt",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/layouts/work-index.html",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/layouts/home.html",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/layouts/site.html",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/lib/filters/asset.js",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/content/students/nate-butler/student.md",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/content/students/taylor-emmerson/student.md",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/content/students/taylor-emmerson/markdown-example-page/project.md",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/content/students/jordana-bauco/student.md",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/content/students/shiela-rocillo/film-festival-intro-sequence/project.md",
+		"/Users/Nate/Google Drive/Code/cranebot/explorer/explorer.ino",
+		"/Users/Nate/Google Drive/Code/cranebot/examples/millisExample.ino",
+		"/Users/Nate/Desktop/sources",
+		"/Users/Nate/Google Drive/Code/cuuubic/index.html",
+		"/Users/Nate/Google Drive/Code/cuuubic/scss/pages/_ch2.scss",
+		"/Users/Nate/Google Drive/Code/cuuubic/scss/pages/_ch1.scss",
+		"/Users/Nate/Google Drive/Code/cuuubic/js/plugin.js",
+		"/Users/Nate/Google Drive/Code/cuuubic/scss/screen.scss",
+		"/Users/Nate/Google Drive/Code/cuuubic/scss/pages/_intro.scss",
+		"/Users/Nate/Google Drive/Code/cuuubic/scss/partials/_typography.scss",
+		"/Users/Nate/Google Drive/Code/cuuubic/scss/pages/_ch4.scss",
+		"/Users/Nate/Google Drive/Code/cuuubic/scss/pages/_ch3.scss",
+		"/Users/Nate/Google Drive/Code/cuuubic/readme.md",
+		"/Users/Nate/Downloads/Course_Outline_2014-2015 DANC 1900 Winter 2016(1)-1-1.doc",
+		"/Users/Nate/Google Drive/Code/cuuubic/scss/pages/_two.scss",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Design Studies Seminar/Record Player Sources",
+		"/Users/Nate/Desktop/Carnegie Library of Pitsburg",
+		"/Users/Nate/Desktop/Courses",
+		"/Users/Nate/Google Drive/Code/kaishi/index.html",
+		"/Users/Nate/Google Drive/Code/ryl.ai/index.html",
+		"/Users/Nate/Google Drive/Code/ryl.ai/CNAME",
+		"/Users/Nate/Google Drive/Code/ryl.ai/layouts/base.html",
+		"/Users/Nate/Google Drive/Code/ryl.ai/Makefile",
+		"/Users/Nate/Google Drive/Code/ryl.ai/layouts/home.html",
+		"/Users/Nate/Google Drive/Code/ryl.ai/README.md",
+		"/Users/Nate/Google Drive/Code/ryl.ai/bin/watch",
+		"/Users/Nate/Google Drive/Code/ryl.ai/bin/www",
+		"/Users/Nate/Google Drive/Code/ryl.ai/layouts/site.html",
+		"/Users/Nate/Google Drive/Code/ryl.ai/Procfile",
+		"/Users/Nate/Google Drive/Code/ryl.ai/package.json",
+		"/Users/Nate/Google Drive/Code/ryl.ai/metadata.js",
+		"/Users/Nate/Google Drive/Code/ryl.ai/layouts/partials/footer.html",
+		"/Users/Nate/Google Drive/Code/ryl.ai/bin/bootstrap",
+		"/Users/Nate/Google Drive/Code/ryl.ai/layouts/project.html",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/assets/css/pages/_student-index.scss",
+		"/Users/Nate/Desktop/Distance Sensor: https:::www.adafruit.com:products",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/layouts/student-index.html",
+		"/Users/Nate/Google Drive/Code/ysdn-2016.github.io/build/assets/bundle.js",
+		"/Users/Nate/Music/iTunes/Album Artwork/E/r",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Design Studies Seminar/The Home of the Future: Year 1999 A.D.",
+		"/Users/Nate/Desktop/untitled.c",
+		"/Users/Nate/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Nate/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Design Studies Seminar/The Home of the Future Text",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Research in Design/Research Question",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/partials/_base.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/build/assets/bundle.js",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/Procfile",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/index.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/pages/_student-index.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/pages/_students.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/js/index.js",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/js/bundle.js",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Design Management/Assignments/Interview Questions",
+		"/Users/Nate/Desktop/Code/Repo/cuuubic/js/scripts.js",
+		"/Users/Nate/Downloads/parallax.js",
+		"/Users/Nate/Desktop/Code/Repo/cuuubic/js/plugin.js",
+		"/Users/Nate/Downloads/parallax.jpg",
+		"/Users/Nate/Desktop/Code/Repo/cuuubic/scss/screen.scss",
+		"/Users/Nate/Desktop/Project II Proposal",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/content/students/nate-butler/student.md",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/students.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/partials/header.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/content/students.yml",
+		"/Users/Nate/Desktop/Code/Repo/cranebot/controller/controller.ino",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Design Management/Assignments/Assignment 2 - LinkedIn Lurking",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/projects/project-sticky-header.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/projects/case-study.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/partials/project-sticky-header.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/projects/standard.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/content/students/aaron-thadathil/student.md",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/projects.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/student.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/partials/_typography.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/partials/_guide.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/pages/_event-ribbon.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/partials/_font-face.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/base.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/modules/_mixins.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/modules/_variables.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/content/index.yml",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/index.html",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Design Studies Seminar/Week 2 - Notes",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Design Management/Reflections/1 - Article",
+		"/Users/Nate/Desktop/Code/Repo/cuuubic/index.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/package.json",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/.csscomb.json",
+		"/Users/Nate/Library/Application Support/Sublime Text 3/Packages/CSScomb/CSScomb.sublime-settings",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/layouts/sponsor.html",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/images/logo.svg",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/pages/_placeholder.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/content/sponsor.yml",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/partials/_normalize.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/partials/_reset.scss",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/assets/css/pages/_home.scss",
+		"/Users/Nate/Library/Application Support/Sublime Text 3/Packages/CSScomb/README.md",
+		"/Users/Nate/Desktop/Code/Repo/styleguide/scss/partials/_guide.scss",
+		"/Users/Nate/Google Drive/Design/Year 4/Semester 2/Physical Computing II/Project 1 Brainstorming",
+		"/Users/Nate/Music/iTunes/Album Artwork/E/e 2",
+		"/Users/Nate/Music/iTunes/Album Artwork/E/Music Archive.dmg",
+		"/Users/Nate/Desktop/Code/Repo/ysdn-2016.github.io/bin/build",
+		"/Users/Nate/Desktop/Design == Making"
+	],
+	"find":
+	{
+		"height": 71.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"",
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"minD",
+			"6",
+			"16",
+			"140",
+			"work-pro",
+			"button",
+			"group",
+			"img",
+			"header",
+			"case study",
+			"p {",
+			"p",
+			"shape",
+			"url",
+			"500px",
+			"cat",
+			"introduction",
+			"<div class=\"desc\">\n											{# <p>{{ project.contents | safe }}</p> #}\n											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n										</div>",
+			"50",
+			"725px",
+			"1450px",
+			"3240px",
+			"2240px",
+			"ch",
+			"ch1",
+			"1",
+			"animation",
+			"pls",
+			"scroll",
+			"A1FFFF",
+			"D9D6FE",
+			"FDBBFD",
+			"F763F3",
+			"9863F7",
+			"61E2FA",
+			"chapter",
+			"dh",
+			"ch_",
+			"ch-",
+			"cbc999",
+			"8cebb5",
+			"36b5ec",
+			"three",
+			"chapter",
+			"led",
+			"LED",
+			"led",
+			"LED",
+			"led",
+			"led2",
+			"led",
+			"LED",
+			"led",
+			"LED",
+			"led",
+			"pull",
+			"grad",
+			"pls",
+			"start",
+			"0.85",
+			"transform",
+			"{\n",
+			"workPage",
+			"45",
+			"icon",
+			"facebook",
+			"gen",
+			"20px",
+			"^.+//.*$",
+			"trans",
+			"7",
+			"(,",
+			"r3",
+			"r2",
+			"r1",
+			"2",
+			"1",
+			"3000",
+			"outlineSquare",
+			"0",
+			"pixelMap",
+			"15",
+			"31",
+			"blockType",
+			"next",
+			"timer",
+			"[]",
+			"1",
+			"0",
+			"// TODO: Delete full rows\n\n// TODO: Calculate Score\n\n// TODO: Display Grid\n\n// TODO: Display Blocks\n\n// TODO: Make Sound\n\n// TODO: Game Over\n\n  // ============= //\n //  START GRID   //\n// ============= //\n\n// Define constants\n\nconst int cols = 16;\nconst int rows = 32;\n\n	// Colors\n\n	const int xColor[] = {200,30,30};\n	const int iColor[] = {200,30,30};\n	const int tColor[] = {240,160,30};\n	const int zColor[] = {200,30,30};\n\n// Define Variables\nint i,j;\nint pixel[cols][rows];\n\nvoid Grid(){\n	// Clear background each frame (this prevents smearing as things move)\n  matrix.fillScreen(0);\n	\n	for (i=0;i < cols;i++){\n		for (j=0;j < rows;j++){\n			matrix.drawPixel(i,j, matrix.Color333(200, 110, 70));\n			// pixel[i][j] = 0;\n		}\n	}\n\n	Serial.println(\"done\");\n}\n",
+			"o",
+			"rotateLED1",
+			"OUTPUT",
+			"rgb",
+			"._section",
+			"4 Columns",
+			".rb",
+			"div",
+			"21FC7A",
+			"blow",
+			"feature-grid",
+			"focused",
+			" a-feature-grid-item",
+			"li",
+			"svg",
+			"console",
+			"close",
+			"videostatus",
+			"overlayShow",
+			"modalShow",
+			"set",
+			"info",
+			"span",
+			"400",
+			"console",
+			"app-header-width",
+			"value",
+			"x",
+			"fff",
+			"Manager",
+			"#",
+			"todo",
+			"timerStarted",
+			"btn",
+			"ledpin",
+			"for (TableRow row : dataTable.rows()){    ",
+			"for (int row = 0; row < rowCount; row++) {",
+			"int row = getRowIndex(dataTable, \"abbrev\", abbrev);"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"1ECF4D",
+			"1ECF4D\n1ECF4D",
+			"infoShow",
+			"app-header-height",
+			"plays",
+			"Lead",
+			"",
+			"startBtn",
+			"k-u-card k-u-grid-3c",
+			"k-",
+			"k"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "explorer.ino",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6778,
+								6778
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5287.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "explorer.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								587,
+								587
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 213.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 72.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Downloads":
+	{
+		"height": 148.0
+	},
+	"output.exec":
+	{
+		"height": 131.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.tetris":
+	{
+		"height": 180.0
+	},
+	"pinned_build_system": "Packages/Processing/Build Systems/Processing.sublime-build",
+	"project": "explorer.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"home",
+				"layouts/home.html"
+			],
+			[
+				"homecss",
+				"assets/css/pages/_home.scss"
+			],
+			[
+				"base",
+				"layouts/base.html"
+			],
+			[
+				"studentcss",
+				"assets/css/pages/_student.scss"
+			],
+			[
+				"shapes",
+				"assets/css/partials/_shapes.scss"
+			],
+			[
+				"headercss",
+				"assets/css/components/_header.scss"
+			],
+			[
+				"header",
+				"layouts/partials/header.html"
+			],
+			[
+				"footer",
+				"layouts/partials/project-footer.html"
+			],
+			[
+				"case",
+				"layouts/projects/case-study.html"
+			],
+			[
+				"project.m",
+				"content/students/aaron-thadathil/acid-trip-typeface/project.md"
+			],
+			[
+				"studentcs",
+				"assets/css/pages/_student.scss"
+			],
+			[
+				"student",
+				"layouts/student.html"
+			],
+			[
+				"project",
+				"layouts/project.html"
+			],
+			[
+				"aboutcss",
+				"assets/css/pages/_about.scss"
+			],
+			[
+				"about",
+				"layouts/about.html"
+			],
+			[
+				"_work",
+				"assets/css/pages/_work.scss"
+			],
+			[
+				"work-i",
+				"layouts/work-index.html"
+			],
+			[
+				"filterproject",
+				"content/students/shiela-rocillo/film-festival-intro-sequence/project.md"
+			],
+			[
+				"stu",
+				"layouts/student.html"
+			],
+			[
+				"asset",
+				"lib/filters/asset.js"
+			],
+			[
+				"studen",
+				"layouts/student-index.html"
+			],
+			[
+				"standard",
+				"layouts/projects/standard.html"
+			],
+			[
+				"studenscs",
+				"assets/css/pages/_students.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 59.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
