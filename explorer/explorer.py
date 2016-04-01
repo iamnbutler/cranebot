@@ -23,7 +23,7 @@ locID 							= 	0													# Location ID of where photo is taken
 capture 						= 	0													# 0 is inactive, 1 is active capture
 dist								=		0													# Sensor distance to object
 
-def cap():
+# def cap():
 	# If capture is 1 then take a picture
 	# if (capture = 1):
 	# 	while (loops < 4)
