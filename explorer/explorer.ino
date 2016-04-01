@@ -198,16 +198,18 @@ void reverse(){
     rWheelServo.write(105);  // set servo to low-speed
     delay(2);
   } else if (distance > mediumDistance) {
-    capture();
+    // capture();
+    lWheelServo.write(90);  // set servo to stop
+    rWheelServo.write(90);  // set servo to stop
     timer.setTimeout(1000, gotoTurn);
   }
 }
 
 void turn(){
   // Turn to go new direction
-  Serial.println("Start Turn");
   lWheelServo.write(90);  // set servo to stop
   rWheelServo.write(90);  // set servo to stop
+  delay(2);
   timer.setTimeout(1000, startTurn);
 }
 
@@ -231,13 +233,16 @@ void gotoTurn() {
 }
 
 void startTurn() {
-  lWheelServo.write(105);  // set servo to low-speed
-  rWheelServo.write(105);  // set servo to low-speed
-  timer.setTimeout(1000, endTurn);
+  Serial.print("turning... ");
+  lWheelServo.write(150);  // set servo to low-speed
+  // rWheelServo.write(90);  // set servo to low-speed
+  delay(2);
+  timer.setTimeout(5000, endTurn);
 }
 
 void endTurn() {
   lWheelServo.write(90);  // set servo to low-speed
   rWheelServo.write(90);  // set servo to low-speed
-  timer.setTimeout(1000, gotoDrive);
+  delay(2);
+  timer.setTimeout(2000, gotoDrive);
 }

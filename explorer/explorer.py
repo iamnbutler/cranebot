@@ -12,6 +12,8 @@
 import picamera
 import uuid
 import time
+import serial
+arduino = serial.Serial('COM1', 9600, timeout=.1)
 camera 							= 	picamera.PiCamera()				# Set up instance of camera
 camera.brightness 	= 	60 												# Adjust Brightness
 # camera.hflip 			= 	True											# Uncomment if camera needs to be flipped
@@ -22,9 +24,9 @@ capture 						= 	0													# 0 is inactive, 1 is active capture
 dist								=		0													# Sensor distance to object
 
 # Read the Arduino info from the Serial port
-ser = serial.Serial('/dev/ttyACM0', 9600) 				# Check port with ls /dev/tty*
-while 1 :
-    ser.readline()</span>
+# ser = serial.Serial('/dev/ttyACM0', 9600) 				# Check port with ls /dev/tty*
+# while 1 :
+#    ser.readline()</span>
 
 # TODO: Recieve signal from ardino and set capture to 1
 
@@ -39,9 +41,8 @@ def cap():
 		loops = 0						# Reset loops
 		capture = 0					# Capture is finished
 
-# Input from arduino
-if ( dist < 26 ):
-	cap() # Take a photo
-	# Do something so that the Explorer doesn't hit the wall
-else:
-	return
+def read():
+	while True:
+	data = arduino.readline()[:-2] #the last bit gets rid of the new-line chars
+	if data:
+		print data
