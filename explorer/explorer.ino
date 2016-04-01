@@ -11,6 +11,10 @@
 // Includes
 
 #include <Servo.h>
+#include <SimpleTimer.h>
+
+// Initialize timer
+SimpleTimer timer;
 
 // Definitions
 Servo panServo;  // create servo object to control a servo
@@ -20,12 +24,12 @@ Servo rWheelServo;  // create servo object to control a servo
 
 #define trigPin 13
 #define echoPin 12
-#define LED_rangeNoInput 11
+#define LED_rangeNoInput 2
 #define LED_rangeInput 4
 #define LED_rangeTrigger 3
 
 // Define distances to make changing them easier
-const int mediumDistance = 140;
+const int mediumDistance = 120;
 const int closeDistance = 16;
 const int minDistance = 6;
 
@@ -69,69 +73,15 @@ void setup() {
 void loop() {
 	// Get range for use in loops
 	range();
-
-  if (distance < closeDistance && distance > minDistance) {
-    //== Closest Distance ==//
-
-    // .: Set distance LEDs :.
-    digitalWrite(LED_rangeTrigger,HIGH);
-    digitalWrite(LED_rangeInput,LOW);
-    digitalWrite(LED_rangeNoInput,LOW);
-
-    // .: Set Wheel Speed :.
-    lWheelServo.write(90);  // set servo to stop
-    rWheelServo.write(90);  // set servo to stop
-    delay(2);
-
-    // .: Pan camera for capture :.
-    // TODO: Convert delays to millis functions
-    // Pan every 1.5 seconds to match photo timer
-    Serial.print("Running Camera Scripts...");
-    delay(100); // Try to  sync pi timer to servo timer
-    panServo.write(70);
-    Serial.print(" 30...");
-    delay(1500);
-    // panServo.write(120);
-    // Serial.print(" 60...");
-    // delay(1500);
-    // panServo.write(180);
-    // Serial.print(" 90...");
-    // delay(1500);
-    // Serial.println(" Done");
-  } else if (distance <= mediumDistance){
-    //== Medium Distance ==//
-
-    // .: Set distance LEDs :.
-    digitalWrite(LED_rangeTrigger,LOW);
-    digitalWrite(LED_rangeInput,HIGH);
-    digitalWrite(LED_rangeNoInput,LOW);
-
-    // .: Set Wheel Speed :.
-    lWheelServo.write(105);  // set servo to low-speed
-    rWheelServo.write(75);  // set servo to low-speed
-    delay(2);
-
-    // .: Pan camera for capture :.
-    panServo.write(70);
-  } else if (distance > mediumDistance) {
-    //== Furthest Distance ==//
-
-    // .: Set distance LEDs :.
-    digitalWrite(LED_rangeTrigger,LOW);
-    digitalWrite(LED_rangeInput,LOW);
-    digitalWrite(LED_rangeNoInput,HIGH);
-
-    // .: Set Wheel Speed :.
-    lWheelServo.write(120);  // set servo to mid-speed
-    rWheelServo.write(60);  // set servo to mid-speed
-    delay(2);
-
-    // .: Pan camera for capture :.
-    panServo.write(0);
+  if (movementDirection === 0) {
+    drive();
+  } else if (movementDirection === 1){
+    reverse();
+  } else if (movementDirection === 2){
+    turn();
   }
 
-  // Run the program 10 times per sec
-  delay(100);
+  timer.run();
 }
 
 // Use rangefinder to find range in cm and send to Pi with Serial
@@ -146,7 +96,7 @@ void range() {
   rawDistance = (duration/2) / 29.1; // Magic number to convert range to cm
 
   // Constrain distance numbers to reasonable numbers
-  if (rawDistance > minDistance && rawDistance < 4000) {
+  if (rawDistance > minDistance && rawDistance < 300) {
     // Most readings over 2XX or under 12 are faulty or split second readings
     // since the distance loop should stop the rover at around ~26 distance
 
@@ -158,7 +108,7 @@ void range() {
     if (diffAbs < 2.5) {
       distance = distance + (diff * 0.2); // Add a fifth of the new value to distance
     } else if (diffAbs > 20) {
-      distance = distance + (diff * 0.1); // Add a tenth of the new value to distance
+      distance = distance + (diff * 0.05); // Add a twentieth of the new value to distance
     }
 
     // Save distance for the next comparison
@@ -173,7 +123,97 @@ void range() {
   }
 }
 
-// void capture() {
-//   // TODO: Send signal to pi to run photo scripts
+void drive(){
+  if (distance < closeDistance && distance > minDistance) {
+    //== Closest Distance ==//
 
-// }
+    // .: Set distance LEDs :.
+    digitalWrite(LED_rangeTrigger,HIGH);
+    digitalWrite(LED_rangeInput,LOW);
+    digitalWrite(LED_rangeNoInput,LOW);
+
+    // .: Set Wheel Speed :.
+    lWheelServo.write(90);  // set servo to stop
+    rWheelServo.write(90);  // set servo to stop
+    int setTimeout(4500, gotoTurn();
+
+    // .: Pan camera for capture :.
+    // TODO: Convert delays to millis functions
+    // Pan every 1.5 seconds to match photo timer
+    // Serial.print("Running Camera Scripts...");
+    // delay(100); // Try to  sync pi timer to servo timer
+    // panServo.write(70);
+    // Serial.print(" 30...");
+    // delay(1500);
+    // panServo.write(120);
+    // Serial.print(" 60...");
+    // delay(1500);
+    // panServo.write(180);
+    // Serial.print(" 90...");
+    // delay(1500);
+    // Serial.println(" Done");
+  } else if (distance <= mediumDistance){
+    //== Medium Distance ==//
+
+    // .: Set distance LEDs :.
+    digitalWrite(LED_rangeTrigger,LOW);
+    digitalWrite(LED_rangeInput,LOW);
+    digitalWrite(LED_rangeNoInput,HIGH);
+
+    // .: Set Wheel Speed :.
+    lWheelServo.write(105);  // set servo to low-speed
+    rWheelServo.write(75);  // set servo to low-speed
+    delay(2);
+
+    // .: Pan camera for capture :.
+    panServo.write(70);
+  } else if (distance > mediumDistance) {
+    //== Furthest Distance ==//
+
+    // .: Set distance LEDs :.
+    digitalWrite(LED_rangeTrigger,HIGH);
+    digitalWrite(LED_rangeInput,HIGH);
+    digitalWrite(LED_rangeNoInput,HIGH);
+
+    // .: Set Wheel Speed :.
+    lWheelServo.write(120);  // set servo to mid-speed
+    rWheelServo.write(60);  // set servo to mid-speed
+    delay(2);
+
+    // .: Pan camera for capture :.
+    panServo.write(0);
+  }
+}
+
+void reverse(){
+  // Reverse in preperation for turn
+  if (distance < closeDistance) {
+    // .: Set Wheel Speed :.
+    lWheelServo.write(60);  // set servo to mid-speed
+    rWheelServo.write(120);  // set servo to mid-speed
+    delay(2);
+  } else if (distance <= mediumDistance){
+    lWheelServo.write(75);  // set servo to low-speed
+    rWheelServo.write(105);  // set servo to low-speed
+    delay(2);
+  } else if (distance > mediumDistance) {
+    capture();
+    int setTimeout(4500, gotoTurn();
+  }
+}
+
+void turn(){
+  // Turn to go new direction
+  movementDirection = 0; // go to drive();
+}
+
+void capture() {
+  // TODO: Send signal to pi to run photo scripts
+  Serial.println("Image Captured!");
+}
+
+// Supporting functions
+
+void gotoTurn() {
+  movementDirection = 2; // go to turn();
+}
