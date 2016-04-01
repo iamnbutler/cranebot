@@ -23,13 +23,6 @@ locID 							= 	0													# Location ID of where photo is taken
 capture 						= 	0													# 0 is inactive, 1 is active capture
 dist								=		0													# Sensor distance to object
 
-# Read the Arduino info from the Serial port
-# ser = serial.Serial('/dev/ttyACM0', 9600) 				# Check port with ls /dev/tty*
-# while 1 :
-#    ser.readline()</span>
-
-# TODO: Recieve signal from ardino and set capture to 1
-
 def cap():
 	# If capture is 1 then take a picture
 	if (capture = 1):
@@ -46,3 +39,5 @@ def read():
 	data = arduino.readline()[:-2] #the last bit gets rid of the new-line chars
 	if data:
 		print data
+
+read()
