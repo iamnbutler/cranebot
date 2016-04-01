@@ -25,14 +25,14 @@ dist								=		0													# Sensor distance to object
 
 def cap():
 	# If capture is 1 then take a picture
-	if (capture = 1):
-		while (loops < 4)
-			camera.capture('export/location_' + str(locID) + '_' + str(uuid.uuid1()) + '.jpg')
-			loops = loops + 1
-			sleep(1.5)				# Wait 1.5s before next photo
-		locID = locID +1		# Increment location ID
-		loops = 0						# Reset loops
-		capture = 0					# Capture is finished
+	# if (capture = 1):
+	# 	while (loops < 4)
+	# 		camera.capture('export/location_' + str(locID) + '_' + str(uuid.uuid1()) + '.jpg')
+	# 		loops = loops + 1
+	# 		sleep(1.5)				# Wait 1.5s before next photo
+	# 	locID = locID +1		# Increment location ID
+	# 	loops = 0						# Reset loops
+	# 	capture = 0					# Capture is finished
 
 def read():
 	while True:
