@@ -81,8 +81,9 @@ void loop() {
     turn();
   }
 
-  timer.setInterval(1000, print);
+  print();
   timer.run();
+  delay(200);
 }
 
 // Use rangefinder to find range in cm and send to Pi with Serial
