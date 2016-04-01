@@ -1,3 +1,6 @@
+#define trigPin 13
+#define echoPin 12
+
 unsigned long currentMillis = 0;
 unsigned long previousMillis = 0;
 long rawDistance, duration;
